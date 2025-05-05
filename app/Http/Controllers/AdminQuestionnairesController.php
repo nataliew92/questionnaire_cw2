@@ -98,7 +98,7 @@ class AdminQuestionnairesController extends Controller
     public function destroy(Questionnaire $questionnaire)
     {
         $questionnaire->delete(); // Removes the questionnaire from the database
-        return redirect()->route('questionnaires.index')->with('success', 'Questionnaire deleted successfully.');
+        return redirect()->route('admin.questionnaires.index')->with('success', 'Questionnaire deleted successfully.');
     }
 
     /**

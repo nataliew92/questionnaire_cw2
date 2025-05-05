@@ -45,7 +45,7 @@
                             View Responses
                         </a>
 
-                        <form action="{{ route('questionnaires.destroy', $questionnaire->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this questionnaire?');">
+                        <form action="{{ route('questionnaires.destroy', $questionnaire) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this questionnaire?');">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="bg-red-600 text-white py-2 px-4 rounded text-sm font-semibold hover:bg-red-700 transition">
@@ -53,7 +53,7 @@
                             </button>
                         </form>
 
-                        <form action="{{ route('questionnaires.toggleStatus', $questionnaire->id) }}" method="POST">
+                        <form action="{{ route('questionnaires.toggleStatus', $questionnaire) }}" method="POST">
                         @csrf
                         <button type="submit" class="bg-gray-500 text-white py-2 px-4 rounded text-sm font-semibold hover:bg-gray-600 transition">
                         Toggle Status
